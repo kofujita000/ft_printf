@@ -6,7 +6,7 @@
 #    By: kofujita <kofujita@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/29 15:17:38 by kofujita          #+#    #+#              #
-#    Updated: 2024/06/11 19:31:36 by moco             ###   ########.fr        #
+#    Updated: 2024/09/16 22:38:02 by kofujita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,4 +62,7 @@ fclean : clean
 re : fclean all
 
 install : all
-	$(CP) $(NAME) $(INSTALL_DIR)
+	@$(MKDIR) $(INSTALL_DIR)/lib
+	@$(MKDIR) $(INSTALL_DIR)/include
+	@$(CP) $(NAME) $(INSTALL_DIR)/lib
+	@$(CP) ft_printf.h $(INSTALL_DIR)/include
